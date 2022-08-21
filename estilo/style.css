@@ -1,0 +1,2572 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    
+  
+   
+}
+
+/**Boot CSS**/
+
+html,body{
+   
+    margin: 0;
+    background: #fff;
+    min-height: 100vh;
+    background:linear-gradient( to right bottom ,#2306F8 ,  #F703F3  );
+    background-repeat: no-repeat;
+    
+   
+
+
+}
+
+input{
+    border: 2;
+}
+
+
+img{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.center{
+    max-width: 1280px;
+    padding:0 2%;
+    margin:0 auto;
+}
+
+.w33{
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.w50{
+    padding:0 10px;
+    width: 50%;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+/*******************************************************************/
+
+
+
+.container-fotos23{
+
+    max-width: 100%;
+    width:  330px;  /* largura*/
+    height: 230px;
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+    .container-fotos23:hover{
+    border: 10px solid #FF0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+.cardSlider{
+
+border-radius: 10px;
+width: 176px;
+height: 220px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+.slide-content h2{
+    font-size: 13px;
+padding: 6px;
+}
+
+.slide-content p{
+    font-size: 11px;
+padding: 6px;
+}
+
+#slider {
+   margin: 0 auto;
+   width: 800px;
+   max-width: 100%;
+   text-align: center;
+}
+#slider input[type=radio] {
+   display: none;
+}
+#slider label {
+   cursor:pointer;
+   text-decoration: none;
+}
+#slides {
+   padding: 10px;
+   border: 3px solid #ccc;
+   background: #fff;
+   position: relative;
+   z-index: 1;
+}
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+   margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+   margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+   margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+   margin-left: -300%;
+}
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 300px;
+}
+#slides .slide {
+   width: 25%;
+   float:left;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   color: #fff;
+}
+#slides .slide_1 {
+   background: #000000;
+}
+#slides .slide_2 {
+   background: #000000;
+}
+#slides .slide_3 {
+   background: #000000;
+}
+#slides .slide_4 {
+   background: #000000;
+}
+#controls {
+   margin: -180px 0 0 0;
+   width: 100%;
+   height: 50px;
+   z-index: 3;
+   position: relative;
+}
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 50px;
+   height: 50px;
+   opacity: .4;
+}
+#controls label:hover {
+   opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+  background: url('../images/13.jpg') no-repeat;
+   float:left;
+    margin:-90px 733px;  /*  800px  mover cima/baixo das imagens // 550px mover para s lados slider */
+   display: block;
+max-width: 60%;
+   width: 15%; /* mover imagem */
+    height: 150px; /* almenta espaço*/
+    background-size: cover;
+    background-position: center; 
+
+}
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
+     background: url('../images/12.jpg') no-repeat;
+   float:left;
+    margin:-90px -55px;  /*  800px  mover cima/baixo das imagens // 550px mover para s lados slider */
+   display: block;
+max-width: 60%;
+   width: 15%; /* largura da imagem*/
+    height: 150px; /* aulturabda imagem*/
+    background-size: cover;
+    background-position: center; 
+}
+#bullets {
+   margin: 150px 0 0;
+   text-align: center;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+
+
+ #slides {
+      max-width: calc(100% - 150px);  /* aumenta tamanho do slide*/
+      margin: 0 auto;
+   }
+
+
+/************************************************************/
+
+nav.tex-rolando {
+    margin: 40px; /* altura das title*/
+    font-size: 30px;
+    text-align: center;
+    color: #FFF; /* cor da fonte*/
+    text-align: center;
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+    border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    box-shadow: 25px 10px 8px #000000; 
+
+
+    
+}
+
+
+
+/*****************************************************************/
+
+.long h2 {
+
+margin: 40px; /* altura das title*/
+     text-align: center;
+    position: relative;
+    -webkit-text-stroke: 0.3vw #FFF;
+    font-size: 3vw;
+    color: #252839; /* cor da fonte*/ 
+    text-transform: uppercase; 
+
+border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+    border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    box-shadow: 25px 10px 8px #000000; 
+
+
+
+
+    
+}
+
+
+.long h2::before {
+ text-align: center;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    width: 0%    
+    height: 100%;
+    color: #000000;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+    }
+
+@keyframes animate
+
+{
+
+    0%,10%,100%
+
+{
+
+    width: 0;
+}
+
+    80%,90%  /* velocidade*/
+{
+
+
+    width: 22.3%;  
+}
+
+}
+/******************************************************************/
+
+
+.card{
+  
+border-radius: 10px;
+width: 176px;
+height: 220px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+.card-caixa{
+  
+border-radius: 10px;
+width: 176px;
+height: 310px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+}
+
+
+.card-carreg{
+  
+border-radius: 10px;
+width: 176px;
+height: 290px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+.card-fone{
+  
+border-radius: 10px;
+width: 176px;
+height: 290px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+.card-cartão{
+  
+border-radius: 10px;
+width: 176px;
+height: 240px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+.card-maquina{
+  
+border-radius: 10px;
+width: 176px;
+height: 280px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+.card-suporte{
+  
+border-radius: 10px;
+width: 176px;
+height: 265px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+.card-mochila{
+  
+border-radius: 10px;
+width: 176px;
+height: 265px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+
+.container-fotos-garraf1{
+
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    box-shadow: 25px 10px 8px #000000;
+    
+    }
+
+
+.container-fotos-garraf{
+
+    max-width: 100%;
+    width:  176px;  /* largura*/
+    height: 100px;
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+
+
+img:hover{
+    border: 10px solid #FF0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+
+
+
+.container-garraf{
+    padding: 40px 0px;
+     box-shadow: 25px 10px 8px #000000;
+}
+figure{
+    max-width: 500px;
+    margin: 50px auto 40px;
+    border:2px solid #fff;
+}
+figure img{
+    max-width: 100%;
+    min-width: 100%;
+    display: block;
+}
+.fot12{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.fot12 li{
+    margin: 0 5px;
+    display: inline-block;
+    width: 100px;
+    border:1px solid #fff;
+    cursor: pointer;
+}
+.fot12 li img{
+    display: block;
+}
+/********************************CAIXA INICIO***************************************/
+
+
+
+
+
+.box-garraf {
+    margin:30px 300px;
+    padding: 0 20px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-garraf p{
+    text-align: center;
+   background: #000000;
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+    font-size: 20px;
+    margin-top: 0px; /* espaçamento da letras*/
+    color: #000000;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+
+
+
+
+/****************************************************************/
+
+
+
+
+
+.container-fotos{
+
+    max-width: 100%;
+    width:  176px;  /* largura*/
+    height: 176px;
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+
+    
+    }
+
+
+img:hover{
+    border: 10px solid #ff0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+
+
+/****************************************************************/
+
+
+
+.whatsapp-link {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 50px;
+            box-shadow: 1px 1px 2px #888;
+            z-index: 1000;
+        }
+ 
+        .fa-whatsapp {
+            margin-top: 2px;
+        }
+
+
+
+
+
+
+
+
+/**************************** FIM BOTÃO WHATSAP************************************/
+
+
+
+/******************Estilização do site***************************************/
+
+header{
+border-bottom: 10px solid #FF0000; /* deixa botão em 3D  e com borda*/
+  position: fixed;   /* fixar menu heade no Topo*/
+   width: 100%;
+   height: 70px;
+   z-index: 2;  /* posiçao  em primeiro luga no topo*/
+    background: #000000
+   
+    }
+
+
+
+.logo a{
+  
+    text-decoration: none; /* tira o anderline  barra*/ 
+    color: white;
+    font-weight: 700;  /* tamanho negrito */
+    text-transform: uppercase;
+    font-size: 23px;
+    left: 20;
+    
+}
+
+nav.mobile{
+        display: none;
+
+    }
+
+
+/******************************DESKTOP****************************************/
+
+
+nav.desktop ul{
+
+    position: relative;
+    top:6px;
+    list-style-type: none;
+}
+
+nav.desktop li{
+    
+    font-weight: 700;  /* tamanho negrito */
+    font-size: 17px; /* tamanho da fonte */
+    padding:10px 10px;  /* aulta e largura */
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav.desktop a{
+    transition: 1s; /* efeitos vermelho */
+    color: white;
+    text-decoration: none;
+}
+
+nav.desktop a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+
+/****************************** FIM DESKTOP****************************************/
+
+
+
+
+
+
+
+/******************************BANNNER********************************************/
+
+
+
+
+
+section.banner-principal{
+   
+    width: 100%; /* mover imagem */
+    height: 800px; /* almenta espaço*/
+    background-image: url('../images/variedades.png');
+    background-size: cover;
+    background-position: center; 
+
+
+    
+}
+
+
+
+section.banner-container{
+
+   
+    height: 250px; /* almenta espaço*/
+    background-size: cover;
+   position: relative;
+    
+}
+
+
+
+.banner-single{
+
+    max-width: 100%;
+    width:  320px;  /* largura*/
+    height: 320px;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+     margin:0px 500px;  /*  800px  mover cima/baixo das imagens // 550px mover para s lados slider */
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 1;   /* posiçao  segundo  luga no topo*/
+    opacity: 0;
+  background-size: cover; 
+   background-position: center; 
+    box-shadow: 25px 10px 8px #000000;
+}
+
+
+
+
+/**************************FIM BANNNER*******************************************/
+
+
+
+
+/***********************************CARREGADOR INICIO******************************/
+
+section.carregador{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+
+}
+
+
+section.carregador h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+     background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-carregador{
+   margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-carregador h4{
+
+    font-size: 15px;   /* tamanho da fonte */
+    color: #FFF;
+    }
+
+
+.box-carregador p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+
+/********************************CARREGADOR FIM***************************************/
+
+
+
+/********************************CAIXA INICIO***************************************/
+
+
+
+section.caixa{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+
+    
+}
+
+section.caixa h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+    font-size: 30px;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+     background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-caixa {
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+.box-caixa h4{
+
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+    
+  }
+
+.box-caixa p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+
+
+/********************************CAIXA FIM***************************************/
+
+
+
+/***********************************FONE INICIO******************************/
+
+section.fone{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+}
+
+section.fone h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+     background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-fone{
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-fone h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-fone p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+/********************************CARREGADOR FIM**********************************/
+
+section.maquina{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+}
+
+section.maquina h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+     background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-maquina{
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-maquina h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-maquina p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+
+
+
+
+/*******************************************************************************/
+
+
+section.cartão{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+}
+
+section.cartão h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+      background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-cartão{
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-cartão h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-cartão p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+
+
+/********************************************************************************/
+
+
+
+section.suporte{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+}
+
+section.suporte h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-suporte{
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-suporte h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-suporte p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+
+
+/***********************************************************************/
+
+
+section.mochila{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+}
+
+section.mochila h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+     background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-mochila{
+    margin:30px 0;
+    padding: 0 200px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-mochila h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-mochila p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+
+
+
+
+
+
+
+/********************************FOOTER INCIO*******************************************/
+
+footer{
+    border-bottom: 15px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    background: #000000;
+    padding: 0px 0;
+}
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 15px;
+}
+
+footer .Saiba-mais{
+           color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 16px;
+}
+
+/*
+Para arrumar scroll-x do IE e EDGE.
+*/
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+/********************************FOOTER FIM*******************************************/
+
+
+@media screen and (max-width: 1024px){
+
+
+
+
+
+
+.container-fotos{
+
+    max-width: 200%;
+    width:  250px;  /* largura*/
+    height: 250px;
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+
+
+img:hover{
+    border: 10px solid #ff0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+
+section.banner-container{
+
+   
+    height: 250px; /* almenta espaço*/
+    background-size: cover;
+     position: relative;
+
+    
+}
+
+
+
+.banner-single{
+
+    max-width: 100%;
+    width:  320px;  /* largura*/
+    height: 320px; 
+     margin:0px 350px;  /*  800px  mover cima/baixo das imagens // 550px mover para s lados slider */
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 1;   /* posiçao  segundo  luga no topo*/
+    opacity: 0;
+  background-size: cover; 
+   background-position: center; 
+    box-shadow: 25px 10px 8px #000000;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+}
+
+
+
+
+    section.caixa{  /* <section class="especialidades"> */
+    padding: 40px 0;
+
+    
+}
+
+section.caixa h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+    font-size: 30px;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-caixa {
+    margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+.box-caixa h4{
+
+
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+    
+  }
+
+.box-caixa p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+
+
+.card-caixa{
+  
+border-radius: 10px;
+width: 250px;
+height: 370px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+/********************************CAIXA FIM***************************************/
+
+
+
+
+
+/***********************************CARREGADOR INICIO******************************/
+
+section.carregador{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+}
+
+
+section.carregador h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-carregador{
+   margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-carregador h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+ 
+  }
+
+
+.box-carregador p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+.card-carreg{
+  
+border-radius: 10px;
+width: 250px;
+height: 370px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+/********************************CARREGADOR FIM***************************************/
+
+
+
+/************INICIO MAQUINA***********************/
+
+
+section.maquina{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+}
+
+
+section.maquina h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-maquina{
+   margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-maquina h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+ 
+  }
+
+
+.box-maquina p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+.card-maquina{
+  
+border-radius: 10px;
+width: 250px;
+height: 350px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+/*************FIM MAQUINA************************/
+
+
+
+
+
+/************INICIO SUPORTE***********************/
+
+section.suporte{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+}
+
+
+section.suporte h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-suporte{
+   margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-suporte h4{
+    font-size: 15px;   /* tamanho da fonte */
+    color: #FFF;
+ 
+  }
+
+
+.box-suporte p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+.card-suporte{
+  
+border-radius: 10px;
+width: 250px;
+height: 350px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+
+/***********FIM SUPOTE***************************/
+
+
+
+
+section.cartão{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+}
+
+section.cartão h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-cartão{
+   margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-cartão h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+ 
+  }
+
+
+.box-cartão p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+.card-cartão{
+  
+border-radius: 10px;
+width: 250px;
+height: 310px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+/************INICIO MOCHILA***********************/
+
+section.fone{  /* <section class="especialidades"> */
+    padding: 40px 0;  /* alturas das bolsas*/
+}
+
+
+section.fone h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin: 40px; /* altura das title*/
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+.box-fone{
+   margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+
+
+.box-fone h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+ 
+  }
+
+
+.box-fone p{   /*fonte */
+   padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+.card-fone{
+  
+border-radius: 10px;
+width: 250px;
+height: 370px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+/***********************************FONE INICIO******************************/
+
+section.mochila{  /* <section class="especialidades"> */
+    padding: 40px 0;
+}
+
+section.mochila h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   font-size: 30px;
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-mochila{
+    margin:30px 0;
+    padding: 0 130px;  /* espaçamendo dos itens pros lados*/
+    flex-direction: column; /* deixa o texto em coluna*/
+}
+
+.box-mchila h4{
+    font-size: 15px;   /* tamanho da fonte */
+    background: #000000;
+    color: #FFF;
+
+  }
+
+.box-mochila p{
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+}
+
+
+.card-mochila{
+  
+border-radius: 10px;
+width: 250px;
+height: 350px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+/********************************CARREGADOR FIM**********************************
+
+
+
+
+/********************************FOOTER INCIO*******************************************/
+
+footer{
+    border-bottom: 15px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    background: #000000;
+    padding: 0px 0;
+}
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 15px;
+}
+
+footer .Saiba-mais{
+           color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 16px;
+}
+}
+
+
+
+@media screen and (max-width: 900px) {
+   #slide1:checked ~ #controls label:nth-child(2),
+   #slide2:checked ~ #controls label:nth-child(3),
+   #slide3:checked ~ #controls label:nth-child(4),
+   #slide4:checked ~ #controls label:nth-child(1),
+   #slide1:checked ~ #controls label:nth-last-child(2),
+   #slide2:checked ~ #controls label:nth-last-child(3),
+   #slide3:checked ~ #controls label:nth-last-child(4),
+   #slide4:checked ~ #controls label:nth-last-child(1) {
+      margin: 0;
+   }
+   #slides {
+      max-width: calc(100% - 150px);  /* aumenta tamanho do slide*/
+      margin: 0 auto;
+   }
+}
+
+
+@media screen and (max-width: 768px){
+
+
+    img{
+        float: none !important;
+        display: block;
+        margin:0 auto;
+    }
+
+    .w50{
+        padding:20px;
+        width: 50%;
+    }
+
+    
+
+@media screen and (max-width: 700px){
+
+
+
+nav.tex-rolando {
+    margin: 40px; /* altura das title*/
+    font-size: 20px;
+    text-align: center;
+    color: #FFF; /* cor da fonte*/
+    text-align: center;
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+    border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    box-shadow: 25px 10px 8px #000000; 
+
+
+    
+}
+
+
+
+/*****************************************************************/
+
+.long h2 {
+
+    margin: 40px; /* altura das title*/
+     text-align: center;
+    position: relative;
+    -webkit-text-stroke: 0.3vw #FFF;
+    font-size: 3vw;
+    color: #252839; /* cor da fonte*/ 
+    text-transform: uppercase; 
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+    border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    box-shadow: 25px 10px 8px #000000; 
+    
+}
+
+
+.long h2::before {
+    text-align: center;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    width: 0%    
+    height: 100%;
+    color: #000000;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+    }
+
+@keyframes animate
+
+{
+
+    0%,10%,100%
+
+{
+
+    width: 0;
+}
+
+    80%,90%  /* velocidade*/
+{
+
+
+    width: 34.5%;  
+}
+
+}
+
+
+/******************************************************************/
+
+
+
+.container-garraf{
+    padding: 40px 0px;
+}
+figure{
+    max-width: 280px;
+    margin: 50px auto 40px;
+    border:2px solid #fff;
+}
+figure img{
+    max-width: 100%;
+    min-width: 100%;
+    display: block;
+}
+.fot12{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.fot12 li{
+    margin: 0 5px;
+    display: inline-block;
+    width: 100px;
+    border:1px solid #fff;
+    cursor: pointer;
+}
+.fot12 li img{
+    display: block;
+}
+
+
+
+.container-fotos-garraf {
+
+    max-width: 100%;
+    width:  100px;  /* largura*/
+    height: 80px;
+     padding: 0%;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+
+
+img:hover{
+    border: 10px solid #FF0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+
+
+
+
+.box-garraf{
+    
+
+    margin:10px 100px;
+    padding: 0px 0px;  /* espaçamendo dos itens pros lados*/
+  
+    
+}
+
+
+
+.box-garraf  p{
+    text-align: center;
+   
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   background: #000000;
+    font-size: 12px;
+    margin-top:5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    
+}
+
+
+
+
+
+.container-fotos{
+
+    max-width: 100%;
+    width:  220px;  /* largura*/
+    height: 220px;
+     padding: 0px;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+
+
+img:hover{
+    border: 10px solid #FF0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+    
+
+/****************************HEADER*******************************/
+
+
+
+
+
+    header{
+    border-bottom: 10px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    padding:30px 0;
+    background: #000000
+
+
+}
+
+header .logo {
+    font-size:25px;  /* tamanho da fone da logo */
+    font-weight: 1000;
+    text-transform: uppercase;
+  
+     }
+
+
+
+/**********************LOGO******************************************/
+
+.logo a{
+    text-decoration: none;
+    color: white;
+  text-align: center;  
+}
+
+
+/********************************FIM LOGO*******************************/
+
+
+
+
+/*****************************FIM-HEADER****************************/
+
+
+
+    nav.desktop{
+        display: none;
+    }
+
+
+
+/*********************BOTAO MOBILE ************************************/
+
+nav.mobile{
+        display: block;
+    }
+
+
+.botao-menu-mobile{
+    font-size: 24px;
+     cursor: pointer;
+        color: white;
+}
+
+nav.mobile  ul{
+
+        top: 60px;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        width: 100%;   /* tamanho  das bordas do menu */
+        display: none;
+        text-align: center;
+       
+       
+    }
+
+     nav.mobile li{
+
+        font-weight: 700; /* fonte */ 
+        width: 100%;
+        display: block;
+        background: black;
+        border-bottom: 10px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+
+        font-size: 17px;
+        padding:8px 0;  /* tamanho das bolas*/
+        border-radius: 100px ; /* formato redondo*/
+
+        /*  width: fit-content;  /* alargura vai se adapta ao conteudo*/ 
+      /*  padding: 0x 0px;  /* almenta borda*/
+
+
+    }
+
+     nav.mobile li a{
+       display: block;
+        color: #FFF;
+        text-decoration: none;
+}
+
+
+
+/*********************FIM BOTAO MOBILE************************************/
+
+
+/****************************BANNNER**********************************/
+
+
+section.banner-principal{
+   
+    width: 100% ; /* mover imagem */
+    height: 300px; /* almenta espaço*/
+    background-image: url('../images/variedades.png');
+    background-size: cover;
+    background-position: center; 
+
+
+}
+
+
+/*******************************************************************/
+
+section.banner-container{
+
+   
+    height: 250px; /* almenta espaço*/
+    background-size: cover;
+   position: relative;
+    
+}
+
+
+
+.banner-single{
+
+    max-width: 100%;
+    width:  320px;  /* largura*/
+    height: 320px;
+     margin:0px 30px;  /*  800px  mover cima/baixo das imagens // 550px mover para s lados slider */
+    position: absolute;
+    left:0;
+    top: 0;
+    z-index: 1;   /* posiçao  segundo  luga no topo*/
+   
+   
+    opacity: 0;
+  background-size: cover; 
+   background-position: center; 
+}
+
+
+/**************************FIM BANNER**********************************/
+
+
+
+
+section.carregador{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+
+   
+}
+
+section.carregador h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-carregador p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    background: #000000;
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+.box-carregador{
+   margin:2px 0;
+    padding: 8px 0 ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-carreg{
+  
+border-radius: 10px;
+width: 176px;
+height: 330px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+section.caixa{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+   
+}
+
+section.caixa h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-caixa p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+
+.box-caixa{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-caixa{
+  
+border-radius: 10px;
+width: 176px;
+height: 350px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+section.fone{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+   
+}
+
+section.fone h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-fone p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+.box-fone{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-fone{
+  
+border-radius: 10px;
+width: 176px;
+height: 330px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+section.cartão{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+ 
+}
+
+section.cartão h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-cartão p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+.box-cartão{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-cartão{
+  
+border-radius: 10px;
+width: 176px;
+height: 280px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+/*********************************************************************/
+
+section.maquina{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+   
+}
+
+section.maquina h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-maquina p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+
+.box-maquina{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-maquina{
+  
+border-radius: 10px;
+width: 176px;
+height: 320px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+/********************************************************************/
+
+
+section.suporte{  /* <section class="especialidades"> */
+    padding: 0px 0px;  /* alturas das bolsas e afastar pro lado*/  
+ 
+}
+
+section.suporte h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+.box-suporte p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+  background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+.box-suporte{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-suporte{
+  
+border-radius: 10px;
+width: 176px;
+height: 300px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+/*********************************************************************/
+
+
+section.suporte{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+   
+}
+
+section.suporte h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-suporte p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+  background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+.box-suporte{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-suporte{
+  
+border-radius: 10px;
+width: 176px;
+height: 300px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+/*****************************************************************************/
+
+
+section.mochila{  /* <section class="especialidades"> */
+    padding: 0px 0px ;  /* alturas das bolsas*/
+
+   
+}
+
+section.mochila h2.title{ /*  <h2 class="title">CARREGADOR PARA CELULAR</h2> */
+   margin:   20px; /* altura das title*/
+   font-size: 15px;
+    text-align: center;
+   /* font-weight: 400; */  /* fonte normal */
+   color: #FFF; /* cor da fonte*/
+   /* border: 2px solid black;  /* linha de borda  */
+     text-align: center;
+    /*width: fit-content;  /* alargura vai se adapta ao conteudo*/
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000;
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+}
+
+
+
+.box-mochila p{   /*fonte */
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+     border-radius: 2px ; /* formato redondo*/
+    
+}
+
+
+.box-mochila{
+   margin:2px 0;
+    padding: 8px 0px ;  /* alturas das bolsas*/
+
+    flex-direction: column; /* deixa o texto em coluna*/
+    
+}
+
+.card-mochila{
+  
+border-radius: 10px;
+width: 176px;
+height: 300px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+/*************************************************************************/
+
+
+
+.slide-content h2{
+    font-size: 13px;
+padding: 6px;
+}
+
+.slide-content p{
+    font-size: 11px;
+padding: 6px;
+}
+
+
+
+
+.container-fotos23{
+
+    max-width: 100%;
+    width:  220px;  /* largura*/
+    height: 200px;
+     padding: 0px;
+     border: 3px solid #FF0000;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+    
+    }
+
+    .container-fotos23:hover{
+    border: 10px solid #ff0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+.cardSlider{
+    
+border-radius: 10px;
+width: 176px;
+height: 230px;
+background-color: #FF0000;
+ box-shadow: 25px 10px 8px #000000;
+
+}
+
+
+
+
+
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    background: url('../images/13.jpg') no-repeat;
+   float:left;
+   margin: -20px 320px;  /* seta direita*/
+   display: block;
+   position: absolute;
+   max-width: 60%;
+   width: 10%; /* mover imagem */
+    height: 50px; /* almenta espaço*/ 
+    background-size: cover;
+    background-position: center; 
+
+
+}
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
+     background: url('../images/12.jpg') no-repeat;
+   float:left;
+    margin:-20px 33px;  /*  seta esquerda*/
+   display: block;
+max-width: 60%;
+   width: 10%; /* mover imagem */
+    height: 50px; /* almenta espaço*/
+    background-size: cover;
+    background-position: center; 
+
+}
+#bullets {
+   margin: 150px 0 0;
+   text-align: center;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+
+/*************************************************************************/
+
+
+footer{
+    border-bottom: 15px solid #FF0000; /* deixa botão em 3D  e com borda*/
+    background: #000000;
+    padding: 0px 0;
+    margin-top: 25px;
+
+}
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 16px;
+
+}
+
+    footer .Saiba-mais{
+           color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 16px;
+  }
+
+}
+
+/*Para arrumar scroll-x do IE e EDGE.*/
+
+body{
+    overflow-x: hidden;
+    
+   }
+}
+/***************************FIM FOOTER*************************************/
+
+
+
+
+
+
