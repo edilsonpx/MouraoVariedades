@@ -1,0 +1,227 @@
+<html>
+
+<head>
+    <title>Portal do Cliente</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: blue;
+        }
+
+        .cliente {
+            text-align: center;
+        }
+
+        .cliente img {
+            max-width: 500px;
+            width: 30%;
+        }
+
+        .cliente h2 {
+            color: black;
+            padding: 10px;
+        }
+
+        .cliente textarea {
+
+            width: 30%;
+            height: 40px;
+            padding: 10px;
+        }
+
+        .cliente input {
+            padding: 10px;
+            width: 30%;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .admin {
+            text-align: center;
+        }
+
+        .admin h2 {
+            color: black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+
+
+<div class="central">
+   <div class="card">
+    <div class="container-pedidos">
+      </div>
+        </div>
+           </div>
+
+
+
+           <div class="central">
+            <div class="card">
+             <div class="container-pedidos2">
+               </div>
+                 </div>
+                    </div>
+
+       
+        <!--CONTAINER-PEDIDOS-->
+
+    <script>
+        var  firebaseConfig = {
+        apiKey: "AIzaSyAlyKAt0Eg57cb8GZDalCaEwIALPWPAEds",
+        authDomain: "painel-loguin.firebaseapp.com",
+        projectId: "painel-loguin",
+        storageBucket: "painel-loguin.appspot.com",
+        messagingSenderId: "24549930727",
+        appId: "1:24549930727:web:98a17c160e55172c4bd442"
+      };
+        firebase.initializeApp(firebaseConfig);
+
+        const storage = firebase.storage();
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+
+    
+        //PUXAR PEDIDOS DO FIRESTORE
+        db.collection('documentos').onSnapshot((data) => {
+            let list = document.querySelector('.container-pedidos');
+            list.innerHTML = "";
+            data.docs.map((val) => {
+
+                list.innerHTML += `     
+                <div style="
+
+                  display: inline-block;
+                  
+                  " class=".container-pedidos">
+
+
+                  <div style="
+
+                  border-radius:5px;
+                  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+                  width:400px;
+                  margin:20px; 
+                  transition: all 0.3s ease-out;
+                  background-color:white;
+                  padding:20px;
+                  margin-bottom:20px;
+                  display:flex;
+                  display: inline-block;
+                  text-align:left;
+ 
+                   " class=".card1">
+
+
+
+                   <div style="
+
+                   display: flex;
+                   justify-content:center;
+                   align-items: center;
+
+                  
+
+                   " class=".central">
+
+                   <p>${val.data().descricao}</p>
+
+        
+                        <img style="
+                        max-width:100px;
+                         margin-top:10px;
+                         text-align:left;
+                         " src ="${val.data().arquivoURL}"
+                    </div>
+                    <hr>
+                `;
+            })
+        })
+
+
+
+
+
+        //PUXAR PEDIDOS DO FIRESTORE
+        db.collection('caixa').onSnapshot((data) => {
+            let list = document.querySelector('.container-pedidos2');
+            list.innerHTML = "";
+            data.docs.map((val) => {
+                list.innerHTML += `
+                    <div style="
+
+                    display: inline-block;
+
+                     " class="container-pedidos2">
+
+
+
+                     <div style="
+
+border-radius:5px;
+box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+width:400px;
+margin:20px; 
+transition: all 0.3s ease-out;
+background-color:white;
+padding:20px;
+margin-bottom:20px;
+display:flex;
+display: inline-block;
+text-align:left;
+
+ " class=".card1">
+
+
+
+ <div style="
+
+ display: flex;
+ justify-content:center;
+ align-items: center;
+
+ " class=".central">
+
+
+
+
+                        <p>${val.data().descricao}</p>
+                        <img style="max-width:150px; margin-top:10px;" src ="${val.data().arquivoURL}"
+                    </div>
+                    <hr>
+                `;
+            })
+        })
+
+
+
+
+        
+
+    </script>
+   
+
+<script src="js/firebase.js"></script>
+</body>
+
+</html>
