@@ -191,7 +191,7 @@ margin-bottom:20px;
 display:flex;
 display: inline-block;
 text-align:center;
-font-size: 30px;
+
 color: blue;
  " class=".card1">
 
@@ -205,9 +205,13 @@ color: blue;
 
  " class=".central">
 
-                        <p>${val.data().descricao}</p>
+                        <p style="
+                  font-size: 30px;>${val.data().descricao}</p>
 
-                        <img 
+                        <img style="
+
+                         max-width:300px;
+                         margin-top:10px;
 
                          " src ="${val.data().arquivoURL}"
                     </div>
