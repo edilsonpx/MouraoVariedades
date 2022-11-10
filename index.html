@@ -261,7 +261,7 @@ Font-size:30px;
 
                
 //PUXAR PEDIDOS DO FIRESTORE
-        db.collection('caixa').onSnapshot((data) => {
+        db.collection('foto').onSnapshot((data) => {
             let list = document.querySelector('.container-pedidos2');
             list.innerHTML = "";
             data.docs.map((val) => {
