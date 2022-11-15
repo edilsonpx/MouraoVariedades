@@ -50,6 +50,54 @@
             color: black;
             padding: 10px;
         }
+
+          <div style="
+
+                  display: inline-block 
+                  " class="container-pedidos">
+
+        <div style="
+                  
+border-radius:7px;
+box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+width:447px;
+margin:20px; 
+transition: all 0.3s ease-out;
+background-color:white;
+padding:100px;
+margin-bottom:0px;
+display:flex;
+display: inline-block;
+text-align:center;
+
+color: blue;
+ " class=".card1">
+
+
+
+ <div style="
+
+ display: flex;
+ justify-content:center;
+ align-items: center;
+
+ " class=".central">
+
+                        <img style="
+                         max-width: 447%;
+    width:  370px;  
+    height: 550px;
+     padding: 0%;
+     border: 3px solid #FF0000;  
+   cursor: pointer;  
+
+
+
+
+
+
+
+
     </style>
 </head>
 
@@ -143,50 +191,31 @@
     
         //PUXAR PEDIDOS DO FIRESTORE
         db.collection('documentos').onSnapshot((data) => {
-            let list = document.querySelector('.container-pedidos');
+            let list = document.querySelector('#container-pedidos');
             list.innerHTML = "";
             data.docs.map((val) => {
 
                 list.innerHTML += `     
                 <div style="
 
-                  display: inline-block;
+                  
                   " class="container-pedidos">
 
         <div style="
                   
-border-radius:7px;
-box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-width:447px;
-margin:20px; 
-transition: all 0.3s ease-out;
-background-color:white;
-padding:100px;
-margin-bottom:0px;
-display:flex;
-display: inline-block;
-text-align:center;
 
-color: blue;
  " class=".card1">
 
 
 
  <div style="
 
- display: flex;
- justify-content:center;
- align-items: center;
+ 
 
  " class=".central">
 
                         <img style="
-                         max-width: 447%;
-    width:  370px;  
-    height: 550px;
-     padding: 0%;
-     border: 3px solid #FF0000;  
-   cursor: pointer;  
+                         
                         
                         
                          " src ="${val.data().arquivoURL}"
