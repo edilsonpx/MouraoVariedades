@@ -276,9 +276,15 @@ img:hover{
         })
 
 
-
+   Var codigo;
+   Var refBanco = firebase.database().ref(codigo);
+  
 
      function deletar(){
+
+
+  codigo = document.getElementById("textCodigo").value;
+  refBanco.child(codigo).remove();
 
   alert("remover");
 
