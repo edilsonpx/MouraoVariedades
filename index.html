@@ -344,10 +344,7 @@ img:hover{
         const provider = new firebase.auth.GoogleAuthProvider();
 
 
-             const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = "Remover";
-        li.appendChild(deleteButton);
-
+             
     
                 //PUXAR PEDIDOS DO FIRESTORE
                 db.collection('caixa').onSnapshot((data) => {
@@ -363,6 +360,11 @@ img:hover{
             list.innerHTML = "";
             data.docs.map((val) => {
                 list.innerHTML += `
+
+const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = "Remover";
+        li.appendChild(deleteButton);
+
 
                 <div id="central-ID" class="central"></div>
                     <div id="container-pedidos-ID" class="container">
