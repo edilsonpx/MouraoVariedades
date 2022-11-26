@@ -376,7 +376,7 @@ nav.mobile  ul{
 
 
     #container-pedidos-ID{
-    padding: 10px 3px;  /*altura dos cards*/
+    padding: 0px 3px;  /*altura dos cards*/
   
     
 }
@@ -393,7 +393,7 @@ nav.mobile  ul{
 .card{
  
 width: 176px;
-height: 270px;
+height: 290px;
 background-color: #F8F8FF;
 border-radius: 10px;
  box-shadow: 25px 10px 8px #000000;
