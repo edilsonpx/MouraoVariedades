@@ -353,7 +353,9 @@ img:hover{
 
                    
      
-
+const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = "Remover";
+        li.appendChild(deleteButton);
 
 
      
@@ -361,9 +363,7 @@ img:hover{
             data.docs.map((val) => {
 
 
-const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = "Remover";
-        li.appendChild(deleteButton);
+
                 list.innerHTML += `
 
 
