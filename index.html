@@ -350,13 +350,10 @@ img:hover{
             let list = document.querySelector('.container-pedidos');
 
 
-        const deleteButton = document.createElement('button');
+                   const deleteButton = document.createElement('button');
         deleteButton.innerHTML = "Remover";
-        deleteButton.classList.add('outline', 'danger');
-        deleteButton.addEventListener('click', event => {
-            event.stopPropagation();
-            askRemoveTransaction(transaction);
-        })
+      
+  
         li.appendChild(deleteButton);
      
 
