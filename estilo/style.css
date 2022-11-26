@@ -246,7 +246,10 @@ img:hover{
  
   @media screen and (max-width: 700px){
 
-
+.w50{
+    padding:0 10px;
+    width: 50%;
+}
 
 
 header{
@@ -345,7 +348,7 @@ nav.mobile  ul{
 
 #central-ID-titulo1{
     margin:0px;
-    padding: 0 120px;  /* espaçamendo dos itens pros lados*/
+    padding: 0 20px;  /* espaçamendo dos itens pros lados*/
     display: inline-block;
 }
 
@@ -376,7 +379,7 @@ nav.mobile  ul{
 
 
     #container-pedidos-ID{
-    padding: 0px 3px;  /*altura dos cards*/
+    padding: 0px 2px;  /*altura dos cards*/
   
     
 }
@@ -395,7 +398,7 @@ nav.mobile  ul{
 width: 176px;
 height: 290px;
 background-color: #F8F8FF;
-border-radius: 10px;
+border-radius: 5px;
  box-shadow: 25px 10px 8px #000000;
  text-align: center;
 
