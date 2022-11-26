@@ -359,11 +359,14 @@ img:hover{
      
             list.innerHTML = "";
             data.docs.map((val) => {
-                list.innerHTML += `
+
 
 const deleteButton = document.createElement('button');
         deleteButton.innerHTML = "Remover";
         li.appendChild(deleteButton);
+                list.innerHTML += `
+
+
 
 
                 <div id="central-ID" class="central"></div>
