@@ -344,17 +344,17 @@ img:hover{
         const provider = new firebase.auth.GoogleAuthProvider();
 
 
+             const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = "Remover";
+        li.appendChild(deleteButton);
+
     
                 //PUXAR PEDIDOS DO FIRESTORE
                 db.collection('caixa').onSnapshot((data) => {
             let list = document.querySelector('.container-pedidos');
 
 
-                   const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = "Remover";
-      
-  
-        li.appendChild(deleteButton);
+                   
      
 
 
