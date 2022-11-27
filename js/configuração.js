@@ -70,22 +70,7 @@ var  firebaseConfig = {
                                                })
 
 
-               //PUXAR PEDIDOS DO FIRESTORE
-                db.collection('fone').onSnapshot((data) => {
-            let list = document.querySelector('.container-fone');
-            list.innerHTML = "";
-            data.docs.map((val) => {
-                list.innerHTML += `
-
-                <div id="central-ID" class="central"></div>
-                    <div id="container-pedidos-ID" class="container">
-                        <div id="card-ID" class="card">
-                          <img   id="foto" src ="${val.data().arquivoURL}"</div>
-                              <p id="descriçao">${val.data().descricao}</p>
-                                </div>
-                                        `;
-                                           })
-                                               })
+               
 
                 //PUXAR PEDIDOS DO FIRESTORE
                 db.collection('titulo1').onSnapshot((data) => {
