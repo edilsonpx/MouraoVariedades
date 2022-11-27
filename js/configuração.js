@@ -52,6 +52,24 @@ var  firebaseConfig = {
                                                })
 
 
+              //PUXAR PEDIDOS DO FIRESTORE
+                db.collection('variedades').onSnapshot((data) => {
+            let list = document.querySelector('.container-variedades');
+            list.innerHTML = "";
+            data.docs.map((val) => {
+                list.innerHTML += `
+
+                <div id="central-ID" class="central"></div>
+                    <div id="container-pedidos-ID" class="container">
+                        <div id="card-ID" class="card">
+                          <img   id="foto" src ="${val.data().arquivoURL}"</div>
+                              <p id="descriçao">${val.data().descricao}</p>
+                                </div>
+                                        `;
+                                           })
+                                               })
+
+
                 //PUXAR PEDIDOS DO FIRESTORE
                 db.collection('titulo1').onSnapshot((data) => {
             let titulo1 = document.querySelector('.container-titulo1');
@@ -78,6 +96,24 @@ var  firebaseConfig = {
 
                 <div id="central-ID-titulo" class="central"></div>
                     <div id="container-titulo-ID" class="container-titulo2">
+                        <div id="card-ID-titulo" class="card-titulo">
+                       
+                              <p id="descriçao-titulo">${val.data().descricao}</p>
+                                </div>
+                                        `;
+                                           })
+                                               })
+
+
+
+            //PUXAR PEDIDOS DO FIRESTORE
+                db.collection('titulo3').onSnapshot((data) => {
+            let titulo3 = document.querySelector('.container-titulo3');
+            titulo3.innerHTML = "";
+            data.docs.map((val) => {
+                titulo3.innerHTML += `
+                <div id="central-ID-titulo" class="central"></div>
+                    <div id="container-titulo-ID" class="container-titulo3">
                         <div id="card-ID-titulo" class="card-titulo">
                        
                               <p id="descriçao-titulo">${val.data().descricao}</p>
