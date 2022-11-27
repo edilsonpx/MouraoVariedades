@@ -522,6 +522,20 @@ nav.tex-rolando {
 }
 
 
+nav.tex-rolando2 {
+    margin: 0px; /* altura das title*/
+    font-size: 20px;
+    text-align: center;
+    color: #FFF; /* cor da fonte*/
+    text-align: center;
+    padding: 0px 10px;  /* almenta borda*/
+    border-radius: 20px ; /* formato redondo*/
+    background: #000000; 
+    border-bottom: 5px solid #F8F8FF; /* deixa botão em 3D  e com borda*/
+    box-shadow: 25px 10px 8px #000000;  
+}
+
+
 
 /*****************************************************************/
 
