@@ -68,10 +68,10 @@ img{
 
 .whatsapp-link {
             position: fixed;
-            width: 55px;
+            width: 30px;
             height: 45px;
-            bottom: 80px;
-            right: 40px;
+            bottom: 40px;
+            right: 30px;
             background-color: #25d366;
             color: #fff;
             border-radius: 50px;
@@ -225,8 +225,8 @@ nav.desktop a:hover{
 
 .card{
     border-radius: 10px;
-width: 300px;
-height: 350px;
+width: 250px;
+height: 320px;
 background-color: #F8F8FF;
  box-shadow: 25px 10px 8px #000000;
  text-align: center;
