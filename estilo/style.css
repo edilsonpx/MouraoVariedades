@@ -69,7 +69,7 @@ img{
 .whatsapp-link {
             position: fixed;
             width: 55px;
-            height: 55px;
+            height: 45px;
             bottom: 80px;
             right: 40px;
             background-color: #25d366;
@@ -300,6 +300,163 @@ Para arrumar scroll-x do IE e EDGE.
 
 body{
     overflow-x: hidden;
+}
+
+
+
+
+@media screen and (max-width: 1080px){
+
+
+
+ #container-titulo-ID{  /* <section class="especialidades"> */
+    padding: 0px 0;
+    /*display: inline-block; */
+    text-align: center;
+}
+
+#central-ID-titulo1{
+    margin:10px;
+    padding: 0 120px;  /* espaçamendo dos itens pros lados*/
+    display: inline-block;
+}
+
+#descriçao-titulo{
+    padding: 1%;  /* tamanho das pordas*/
+     border: 7px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   background: #000000;
+    font-size: 20px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    text-align: center;
+}
+
+.card-titulo1{
+    text-align: center;
+   color: #FFF; /* cor da fonte*/
+    border-radius: 5px ; /* formato redondo*/
+    background: #000000; 
+     border-bottom: 5px solid #FF0000; /* deixa botão em 3D  e com borda*/ 
+
+}
+
+
+
+/*************************************************************************/
+
+
+
+
+
+ #container-pedidos-ID{  /* <section class="especialidades"> */
+    padding: 10px 0;
+    display: inline-block;
+}
+
+
+#central-ID{
+    margin:10px;
+    padding: 0 120px;  /* espaçamendo dos itens pros lados*/
+    display: inline-block;
+}
+
+
+#descriçao{
+    padding: 0%;  /* tamanho das pordas*/
+     border: 3px solid #FFF;  /* cor da borta das fotos*/
+   cursor: pointer;  /*cursor pra foto*/
+   width: fit-content;  /* alargura vai se adapta ao conteudo*/
+   background: #000000;
+    font-size: 12px;
+    margin-top: 5px; /* espaçamento da letras*/
+    color: #FFF;
+    font-weight: 1000; /* fonte com borda negrito */
+    text-align: center;
+}
+
+
+.card{
+    border-radius: 10px;
+width: 250px;
+height: 350px;
+background-color: #F8F8FF;
+ box-shadow: 25px 10px 8px #000000;
+ text-align: center;
+
+}
+/*
+        .card{
+    
+
+    border-radius:5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    width:300px;
+    margin:20px; 
+    transition: all 0.3s ease-out;
+    background-color:white;
+    padding:20px;
+    margin-bottom:20px;
+    display:flex;
+    display: inline-block;
+    text-align:left;
+    
+    
+    }
+
+    */
+  
+    #foto{
+
+max-width: 250%;
+width:  250px; 
+height: 210px; 
+
+}
+
+img:hover{
+    border: 10px solid #FF0000;  /* ao colocar cursor em cima da foto as bordas fica vermelha*/
+}
+
+
+/********************************FOOTER INCIO*******************************************/
+
+footer{
+    border-bottom: 15px solid #F8F8FF; /* deixa botão em 3D  e com borda*/
+    background: #000000;
+    padding: 0px 0;
+}
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 15px;
+}
+
+footer .Saiba-mais{
+           color: white;
+    text-align: center;
+    font-weight:400;
+    font-size: 16px;
+}
+
+/*
+Para arrumar scroll-x do IE e EDGE.
+*/
+
+body{
+    overflow-x: hidden;
+}
+
+
 }
 
 
